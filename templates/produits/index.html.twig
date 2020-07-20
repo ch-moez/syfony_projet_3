@@ -1,0 +1,26 @@
+{% extends 'bootstrap.html.twig' %}
+
+
+
+{% block body %}
+
+<div class="row">
+{% for p in prod %}
+    <div class="col-md-3">
+        <a href="/detailProduit/{{ p.id }}">
+            <img class="img-fluid" src="{{ p.img }}">
+        </a>
+        <h3>{{ p.titre }}</h3>
+        <a class="btn btn-primary" href="/detailProduit/{{ p.id }}" role="button">Link</a>
+        <br><br>
+
+    </div>
+{% endfor %}
+
+
+
+</div><!--  end row -->
+
+
+
+{% endblock %}

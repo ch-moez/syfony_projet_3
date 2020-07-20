@@ -1,0 +1,19 @@
+{% extends 'bootstrap.html.twig' %}
+
+{# this tag only applies to the forms defined in this template #}
+{% form_theme formProduit 'bootstrap_4_layout.html.twig' %}
+
+{% block title %}Creation de nouveau produit{% endblock %}
+
+{% block body %}
+
+
+<h1>Creation d'un nouveau produit</h1>
+
+{{ form_start(formProduit) }}
+{{ form(formProduit) }}
+<button type="submit" class="btn btn-success">Ajouter le produit</button>
+<input type="submit" class="btn btn-success" value="val" />
+{{ form_end(formProduit) }}
+
+{% endblock %}
